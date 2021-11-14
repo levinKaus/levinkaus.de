@@ -1,0 +1,84 @@
+:root{
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --transition-speed: 400ms;
+    --menu-text-color: #f1faee;
+}
+
+body{
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: blueviolet;
+}
+
+main{
+    margin-left: 5rem;
+    padding: 1rem;
+}
+
+.navbar{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background: #1d3557;
+    transition: width var(--transition-speed) ease;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item{
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+}
+
+.link-text{
+    display: none;
+    margin-left: 1rem; 
+    color: var(--menu-text-color);
+}
+
+.nav-link i{
+    margin: 0 1.3rem;
+    font-size: 2rem;
+    color: var(--menu-text-color);
+}
+
+.navbar:hover{
+    width: 12rem;
+}
+
+.navbar:hover .link-text{
+    display: block;
+}
+
