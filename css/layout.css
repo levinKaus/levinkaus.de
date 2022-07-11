@@ -1,0 +1,373 @@
+/* =================================================================================
+*  Table of contents:
+*  a. Header
+*     1. General
+*     2. Primary navigation
+*  b. About
+*  c. Resume
+*     1. Basics
+*     2. Skill bars
+*  d. Footer
+*  ================================================================================= */
+
+/* a. Header ======================================================================= */
+
+/* 1. General ---------------------------------------------------------------------- */
+header {
+   position: relative;
+   height: 800px;
+   min-height: 500px;
+   width: 100%;
+   background: #161415 url(../images/moon.jpg) no-repeat top center;
+   background-size: cover !important;
+   text-align: center;
+   overflow: hidden;
+}
+
+/* Vertically center banner section */
+header:before {
+   content: '';
+   display: inline-block;
+   vertical-align: middle;
+   height: 100%;
+}
+
+.banner {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0 auto;
+   width: 85%;
+   text-align: center;
+}
+
+.banner-text { width: 100%; }
+
+.banner-text h1 {
+   font: 90px/1.1em Verdana, sans-serif;
+   color: #ffffff;
+   margin: 0 auto 18px auto;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+}
+
+header .banner-text h3 {
+   font: 18px/1.9em Verdana, sans-serif;
+   color: #ffffff;
+   margin: 0 auto;
+   width: 70%;
+   text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+}
+
+header .banner-text h3 span, header .banner-text h3 a { color: #F06000; }
+
+header .banner-text hr {
+   width: 60%;
+   margin: 18px auto 24px auto;
+   border-color: rgba(255, 255, 255, .5);
+}
+
+/* Header social links */
+header .social {
+   margin: 24px 0;
+   padding: 0;
+}
+
+header .social li {
+   display: inline-block;
+   margin: 0 15px;
+   padding: 0;
+}
+
+header .social svg{ width: 40px; height: 40px; }
+header .social li a { color: #ffffff; }
+header .social li a:hover, header .social li a:focus { color: #11ABB0; }
+
+/* Scrolldown link */
+header .scrolldown a {
+   position: absolute;
+   bottom: 30px;
+   left: 50%;
+   display: block;
+   height: 42px;
+   width: 42px;
+   line-height: 42px;
+   color: #ffffff;
+   border-radius: 100%;
+   transition: all .3s ease-in-out;
+}
+
+header .scrolldown a:hover, header .scrolldown a:focus { color: #11ABB0; }
+
+/* 2. Primary navigation ----------------------------------------------------------- */
+
+#nav-wrap ul, #nav-wrap li, #nav-wrap a {
+   margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+/* Nav-wrap */
+#nav-wrap {
+   font-size: 12px;
+   width: 100%;
+   text-transform: uppercase;
+   letter-spacing: 2.5px;
+   margin: 0 auto;
+   z-index: 100;
+   position: fixed;
+   left: 0;
+   top: 0;
+}
+
+.opaque { background-color: #333333; }
+
+/* Hide toggle button */
+#nav-wrap > a.mobile-btn { display: none; }
+
+ul#nav {
+   min-height: 48px;
+   width: auto;
+   text-align: center;
+}
+
+ul#nav li {
+   position: relative;
+   list-style: none;
+   height: 48px;
+   display: inline-block;
+}
+
+/* Links */
+ul#nav li a {
+   display: inline-block;
+   padding: 8px 13px;
+   line-height: 32px;
+   text-align: left;
+	transition: color .2s ease-in-out;
+}
+
+ul#nav li.current a { color: #F06000; }
+
+/* b. About ======================================================================== */
+
+.intro {text-align: justify;}
+
+#about {
+   background: #2B2B2B;
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+}
+
+#about h2 {
+   font: 22px/30px Verdana, sans-serif;
+   color: #ffffff;
+   margin-bottom: 12px;
+}
+
+#about p {
+   line-height: 30px;
+   color: #7A7A7A;
+}
+
+#about .profile-pic {
+   position: relative;
+   width: 120px;
+   height: 120px;
+   border-radius: 100%;
+}
+
+#about .download {
+   width: 58.33333%;
+   padding-top: 6px;
+}
+
+#about .main-col { padding-right: 5%; }
+
+#about .download .button {
+   margin-top: 6px;
+   background: #444444;
+}
+
+#about .download .button:hover, #about .download .button:focus {
+   background: #ffffff;
+   color: #444444;
+}
+
+#about .download .button svg {
+   margin-right: 15px;
+   width: 18px;
+   height: 18px;
+}
+
+/* c. Resume ======================================================================= */
+
+/* 1. Basics ----------------------------------------------------------------------- */
+#resume {
+   background: #ffffff;
+   padding-top: 90px;
+   padding-bottom: 72px;
+   overflow: hidden;
+}
+
+#resume a, #resume a:visited  { color: #313131; }
+#resume a:hover, #resume a:focus { color: #11ABB0; }
+
+#resume h1 {
+   font: 18px/24px Verdana, sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+#resume h1 span {
+   border-bottom: 3px solid #11ABB0;
+   padding-bottom: 6px;
+}
+
+#resume h3 {
+   font: 25px/30px Verdana, sans-serif;
+}
+
+#resume .header-col { padding-top: 9px; }
+#resume .main-col { padding-right: 10%; }
+
+.education, .work {
+   margin-bottom: 48px;
+   padding-bottom: 24px;
+}
+
+#resume .info {
+   font: 16px/24px Verdana, sans-serif;
+   color: #6E7881;
+   margin-bottom: 18px;
+   margin-top: 9px;
+}
+
+#resume .info span {
+   margin-right: 5px;
+   margin-left: 5px;
+}
+
+#resume .date {
+   font: 15px/24px Verdana, sans-serif;
+   margin-top: 6px;
+}
+
+/* 2. Skill bars ------------------------------------------------------------------- */
+.bars {
+	width: 95%;
+	float: left;
+	padding: 0;
+	text-align: left;
+}
+
+.bars .skills {
+  	margin-top: 36px;
+   list-style: none;
+   padding-left: 0px;
+}
+
+.bars li {
+   position: relative;
+  	margin-bottom: 60px;
+  	background: #cccccc;
+  	height: 42px;
+  	border-radius: 3px;
+}
+
+.bars li em {
+	font: 15px Verdana, sans-serif;
+   color: #313131;
+	text-transform: uppercase;
+   letter-spacing: 2px;
+	font-weight: normal;
+   position: relative;
+	top: -36px;
+}
+
+.bar-expand {
+   position: absolute;
+   left: 0;
+   top: 0;
+
+   margin: 0;
+   padding-right: 24px;
+  	background: #313131;
+   display: inline-block;
+  	height: 42px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
+}
+
+.java { width: 85%; }
+.csharp {width: 75%; }
+.c { width: 75%; }
+.cpp { width: 75%; }
+.assembly { width: 55%; }
+.html5 { width: 60%; }
+.css { width: 60%; }
+.photoshop { width: 65%; }
+
+/* d. Footer ======================================================================= */
+
+footer {
+   padding-top: 48px;
+   margin-bottom: 48px;
+   color: #303030;
+   font-size: 14px;
+   text-align: center;
+   position: relative;
+}
+
+footer a, footer a:visited { color: #525252; }
+footer a:hover, footer a:focus { color: #ffffff; }
+
+footer .copyright {
+   margin: 0;
+   padding: 0;
+}
+
+/* social links */
+footer .social-links{
+   padding: 0;
+}
+
+footer .social-links svg{
+   margin: 18px 0 30px 0;
+   padding: 0;
+   width: 30px;
+   height: 30px;
+}
+
+footer .social-links li {
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   margin-left: 42px;
+}
+
+footer .social-links li:first-child { margin-left: 0; }
+
+/* Go To Top Button */
+#go-top {
+	position: absolute;
+	top: -24px;
+   left: 50%;
+   margin-left: -30px;
+}
+
+#go-top a {
+	text-decoration: none;
+	border: 0 none;
+	display: block;
+	width: 60px;
+	height: 60px;
+   transition: all 0.2s ease-in-out;
+   color: #ffffff;
+   background-color: #525252;
+   font-size: 21px;
+   line-height: 60px;
+ 	border-radius: 100%;
+} 
+
+#go-top a:hover, #go-top a:focus { background-color: #0F9095; }
