@@ -1,243 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
-   <!-- Title -->
-   <title>Levin Kaus</title>
 
-   <!-- Metadata -->
-   <meta charset="UTF-8">
-   <meta name="description" content="Personal website of Levin Kaus">
-   <meta name="keywords" content="Levin Kaus">
-   <meta name="author" content="Levin Kaus">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-	<!-- CSS -->
-   <link rel="stylesheet" href="css/default.css">
-	<link rel="stylesheet" href="css/layout.css">
-   <link rel="stylesheet" href="css/media-queries.css">
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Levin Kaus</title>
+    <meta name="description" content="Personal website of Levin Kaus">
+    <meta name="author" content="Levin Kaus">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="images/favicons/site.webmanifest">
+
 </head>
 
-<body>
-   <!-- Header -->
-   <header id="home">
-      <nav id="nav-wrap">
-         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-	      <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-         <ul id="nav" class="nav">
-            <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-            <li><a class="smoothscroll" href="#about">About</a></li>
-	         <li><a class="smoothscroll" href="#resume">Resume</a></li>
-         </ul>
-      </nav>
-      <div class="row banner">
-         <div class="banner-text">
-            <h1 class="responsive-headline">I'm Levin Kaus.</h1>
-            <h3>I'm a 21 years old <span>computer science</span> and <span>buisness economics</span> student based in <span>Germany</span>. Let's <a class="smoothscroll" href="#about" title="Start scrolling">start scrolling</a> and learn more <a class="smoothscroll" href="#about" title="About me">about me</a>.</h3>
-            <hr>
-            <ul class="social"> 
-               <li><a href="https://www.instagram.com/le_kaus/" title="Instagram - Levin Kaus" target="_blank">
-                  <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-                     <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9S287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7s74.7 33.5 74.7 74.7s-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8c-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8s26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9c-26.2-26.2-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0c-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0c35.9-1.7 67.7-9.9 93.9-36.2c26.2-26.2 34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"></path>
-                  </svg></a>
-               </li>
-               <li><a href="https://www.linkedin.com/in/levinkaus/" title="LinkedIn - Levin Kaus" target="_blank">
-                  <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor"/>
-                  </svg>
-               </a></li>
-               <li><a href="https://github.com/levinKaus" title="Github - Levin Kaus" target="_blank">
-                  <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-                     <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2c1.6 1.6 3.9 2.3 5.2 1c1.3-1 1-3.3-.7-5.2c-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9c1.6 1 3.6.7 4.3-.7c.7-1.3-.3-2.9-2.3-3.9c-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2c2.3 2.3 5.2 2.6 6.5 1c1.3-1.3.7-4.3-1.3-6.2c-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9c1.6 2.3 4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2c-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"/>
-                  </svg>
-               </a></li>
+<body id="top">
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <!-- site header
+    ================================================== -->
+    <header class="s-header">
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html">
+                <img src="images/logo.png" alt="Homepage">
+            </a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-main-nav">
+                <li class="current"><a class="smoothscroll" href="#intro" title="intro">Intro</a></li>
+                <li><a class="smoothscroll" href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll" href="#works" title="works">Works</a></li>
             </ul>
-         </div>
-      </div>
-      <p class="scrolldown">
-         <a class="smoothscroll" href="#about">
-            <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-               <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" fill="currentColor"/>
-            </svg></a>
-      </p>
-   </header>
-
-   <!-- About Section -->
-   <section id="about">
-      <div class="row">
-         <div class="three columns">
-            <img class="profile-pic"  src="images/profile.jpg" alt="Profile picture" />
-         </div>
-         <!-- Main-Col -->
-         <div class="nine columns main-col">
-            <h2>About Me</h2>
-            <p class="intro">I'm a 21 year old computer science and business economics student based in Germany. I was always fascinated 
-               by computer games and smartphone apps and wondered how they were made. So I started programming myself in highschool
-               and even graduated in it. Soon after I started developing my own apps for Android and was able to gather some experience
-               in it by publishing two minor games to the Playstore. Due to my lack of time to keep them updated, they aren't 
-               available anymore. Before I started to study computer science in university, I conducted an internship at a start-up. 
-               There I got some interesting insights in how to get a business idea growing and how to set up a website and an online shop 
-               for it. This internship made me choose business economics alongside the computer science aspect of my studies.
-               In my spare time I play the piano, ride my bike and I do love to travel and explore new places with friends and family.
-               Below you can see my resume. If interested, you can even download it as a pdf file. 
-            </p>
-            <!-- Row -->
-            <div class="row">
-               <div class="columns download">
-                  <p>
-                     <a href="files/resume.pdf" class="button" target="_blank">
-                        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img"  >
-                           <path d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20s9 20 20 20s20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20s9 20 20 20s20-9 20-20z" fill="currentColor"/>
-                        </svg>Download Resume
-                     </a>
-                  </p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-
-   <!-- Resume Section -->
-   <section id="resume">
-
-      <!-- Education -->
-      <div class="row education">
-         <div class="three columns header-col">
-            <h1><span>Education</span></h1>
-         </div>
-         <div class="nine columns main-col">
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://www.tu-darmstadt.de/" title="Technische Universität Darmstadt" target="_blank">Technische Universität Darmstadt</a></h3>
-                  <p class="info"><i>B.Sc. Wirtschaftsinformatik</i><span>&bull;</span> <em class="date">2020 - Present</em></p>
-               </div>
-            </div>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://www.main-taunus-schule.de/" title="Main-Taunus-Schule" target="_blank">Main-Taunus-Schule</a></h3>
-                  <p class="info"><i>Abitur</i><span>&bull;</span> <em class="date">2011 - 2019</em></p>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Work -->
-      <div class="row work">
-         <div class="three columns header-col">
-            <h1><span>Work</span></h1>
-         </div>
-         <div class="nine columns main-col">
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://www.tu-darmstadt.de/" title="Technische Universität Darmstadt" target="_blank">Technische Universität Darmstadt</a></h3>
-                  <p class="info"><i>Student assistant</i><span>&bull;</span> <em class="date">2021 - 2022</em></p>
-               </div>
-            </div>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://www.curaluna.de/" title="Curaluna" target="_blank">Curaluna</a></h3>
-                  <p class="info"><i>Trainee</i><span>&bull;</span> <em class="date">2020</em></p>
-               </div>
-            </div>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://www.facebook.com/pages/category/School/Paradanusorn-School-164577643945545/" title="Paradanusorn School" target="_blank">Paradanusorn School</a></h3>
-                  <p class="info"><i>Volunteer</i><span>&bull;</span> <em class="date">2019 - 2020</em></p>
-               </div>
-            </div>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://vundj.de/" title="Kanzlei Vater und Junghänel" target="_blank">Kanzlei Vater und Junghänel</a></h3>
-                  <p class="info"><i>Trainee</i><span>&bull;</span> <em class="date">2018</em></p>
-               </div>
-            </div>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3><a href="https://www.bgf-plus.de/" title="BGF+ Architekten" target="_blank">BGF+ Architekten</a></h3>
-                  <p class="info"><i>Trainee</i><span>&bull;</span> <em class="date">2016</em></p>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Skills -->
-      <div class="row skill">
-         <div class="three columns header-col">
-            <h1><span>Skills</span></h1>
-         </div>
-         <div class="nine columns main-col">
-				<div class="bars">
-				   <ul class="skills">
-					   <li><span class="bar-expand java"></span><em>Java</em></li>
-                  <li><span class="bar-expand csharp"></span><em>C#</em></li>
-						<li><span class="bar-expand c"></span><em>C</em></li>
-						<li><span class="bar-expand cpp"></span><em>C++</em></li>
-						<li><span class="bar-expand assembly"></span><em>Assembly</em></li>
-                  <li><span class="bar-expand html5"></span><em>HTML5</em></li>
-                  <li><span class="bar-expand css"></span><em>CSS</em></li>
-                  <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
-					</ul>
-				</div>
-			</div>
-      </div>
-
-      <!-- Languages -->
-      <div class="row languages">
-         <div class="three columns header-col">
-            <h1><span>Languages</span></h1>
-         </div>
-         <div class="nine columns main-col">
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>German</h3>
-                  <p class="info">Native</p>
-               </div>
-            </div>
-            <div class="row item">
-               <div class="twelve columns">
-                  <h3>English</h3>
-                  <p class="info">Fluent<span>&bull;</span> <em class="date">TOEFL: iBT: 103</em></p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-
-
-   <!-- Footer -->
-   <footer>
-      <div class="row">
-         <div class="twelve columns">
-            <ul class="social-links">
-               <li><a href="https://www.instagram.com/le_kaus/" title="Instagram - Levin Kaus" target="_blank">
-                  <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-                     <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9S287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7s74.7 33.5 74.7 74.7s-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8c-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8s26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9c-26.2-26.2-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0c-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0c35.9-1.7 67.7-9.9 93.9-36.2c26.2-26.2 34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"></path>
-                  </svg>
-               </a></li>
-               <li><a href="https://www.linkedin.com/in/levinkaus/" title="LinkedIn - Levin Kaus" target="_blank">
-                  <svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-                     <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor"/>
-                  </svg>
-               </a></li>
-               <li><a href="https://github.com/levinKaus" title="Github - Levin Kaus" target="_blank">
-                  <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
-                     <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2c1.6 1.6 3.9 2.3 5.2 1c1.3-1 1-3.3-.7-5.2c-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9c1.6 1 3.6.7 4.3-.7c.7-1.3-.3-2.9-2.3-3.9c-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2c2.3 2.3 5.2 2.6 6.5 1c1.3-1.3.7-4.3-1.3-6.2c-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9c1.6 2.3 4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2c-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"/>
-                  </svg>
-               </a></li>
+            <style>svg{ width: 30px; height: 30px; }</style>
+            <ul class="header-social">
+                <li><a href="https://www.instagram.com/le_kaus/" target="_blank"><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+                    <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9S287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7s74.7 33.5 74.7 74.7s-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8c-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8s26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9c-26.2-26.2-58-34.4-93.9-36.2c-37-2.1-147.9-2.1-184.9 0c-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9c1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0c35.9-1.7 67.7-9.9 93.9-36.2c26.2-26.2 34.4-58 36.2-93.9c2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6c-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6c-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6c29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6c11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"></path>
+                 </svg></i></a></li>
+                <li><a href="https://www.linkedin.com/in/levinkaus/" target="_blank"><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+                    <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2c-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3c94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor"/>
+                 </svg></a></li>
+                <li><a href="https://github.com/levinKaus" target="_blank"> <svg viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" role="img">
+                    <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6c-3.3.3-5.6-1.3-5.6-3.6c0-2 2.3-3.6 5.2-3.6c3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9c2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9c.3 2 2.9 3.3 5.9 2.6c2.9-.7 4.9-2.6 4.6-4.6c-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2c12.8 2.3 17.3-5.6 17.3-12.1c0-6.2-.3-40.4-.3-61.4c0 0-70 15-84.7-29.8c0 0-11.4-29.1-27.8-36.6c0 0-22.9-15.7 1.6-15.4c0 0 24.9 2 38.6 25.8c21.9 38.6 58.6 27.5 72.9 20.9c2.3-16 8.8-27.1 16-33.7c-55.9-6.2-112.3-14.3-112.3-110.5c0-27.5 7.6-41.3 23.6-58.9c-2.6-6.5-11.1-33.3 2.6-67.9c20.9-6.5 69 27 69 27c20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27c13.7 34.7 5.2 61.4 2.6 67.9c16 17.7 25.8 31.5 25.8 58.9c0 96.5-58.9 104.2-114.8 110.5c9.2 7.9 17 22.9 17 46.4c0 33.7-.3 75.4-.3 83.6c0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252C496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2c1.6 1.6 3.9 2.3 5.2 1c1.3-1 1-3.3-.7-5.2c-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9c1.6 1 3.6.7 4.3-.7c.7-1.3-.3-2.9-2.3-3.9c-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2c2.3 2.3 5.2 2.6 6.5 1c1.3-1.3.7-4.3-1.3-6.2c-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9c1.6 2.3 4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2c-1.4-2.3-4-3.3-5.6-2z" fill="currentColor"/>
+                 </svg></a></li>
             </ul>
-            <ul class="copyright"><li>Made with 💖 by Levin </li></ul>
-         </div>
-         <div id="go-top"><a class="smoothscroll" title="Back to Top" href="#home">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" focusable="false" role="img">
-               <path d="M4 15l8-8l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-            </a></div>
-      </div>
-   </footer>
+        </nav>
 
-   <!-- Java Script -->
-   <script src="js/jquery.min.js"></script>
-   <script src="js/waypoints.js"></script>
-   <script src="js/init.js"></script>
+        <a class="header-menu-toggle" href="#"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- intro
+    ================================================== -->
+    <section id="intro" class="s-intro target-section">
+
+        <div class="row intro-content">
+
+            <div class="column large-9 mob-full intro-text">
+                <h3>Hi, I'm Levin Kaus</h3>
+                <h1>
+                    Computer Science<br>
+                    and Business Economics<br>
+                    student
+                </h1>
+            </div>
+
+            <div class="intro-scroll">
+                <a href="#about" class="intro-scroll-link smoothscroll">
+                    Scroll For More
+                </a>
+            </div>
+
+            <div class="intro-grid"></div>
+            <div class="intro-pic"></div>
+
+        </div> <!-- end row -->
+
+    </section> <!-- end intro -->
+
+
+    <!-- about
+    ================================================== -->
+    <section id="about" class="s-about target-section">
+
+        <div class="about-me">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">About Me</h2>
+                </div>
+            </div>
+
+            <div class="row about-me__content" data-aos="fade-up">
+                <div class="column large-full about-me__text">
+                    <p class="lead">
+                        Hi, my name is Levin and I am currently a third year computer science and business economics student at Technische Universität Darmstadt. 
+                    </p>
+
+                    <p>
+                        During high school, I discovered my passion for computer science after taking my first IT class, where I was captivated by the limitless 
+                        potential of this field. This interest was further piqued during a six-month internship at a startup, where I was introduced to the world 
+                        of business economics, ultimately inspiring me to pursue combined studies including both disciplines at university. 
+                    </p>
+
+                    <p>
+                        Aside from academics, I enjoy travelling and exploring new places with friends and family.
+                        I also love watching movies at cinema and riding my bike trough nature.
+                    </p>
+
+                    <p>
+                        In the future, I hope to be an entrepreneur and make a positive impact in the tech industry. 
+                        I am excited to continue my journey as a student and look forward to what the future holds.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row about-me__buttons">
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <a href="files/resume.pdf" target="_blank" class="btn btn--primary full-width">Download CV</a>
+                </div>
+            </div>
+
+        </div> <!-- end about-me -->
+
+        <div class="about-experience">
+
+            <div class="row heading-block" data-aos="fade-up">
+                <div class="column large-full">
+                    <h2 class="section-heading">Work & Education</h2>
+                </div>
+            </div>
+
+            <div class="row about-experience__timeline">
+
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <div class="timeline">
+
+                        <div class="timeline__icon-wrap">
+                            <span class="timeline__icon timeline__icon--work"></span>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">September 2021 - March 2022</p>
+                                <h3 class="item-title"><a href="https://www.tu-darmstadt.de/" target="_blank">Technische Universität Darmstadt</a></h3>
+                                <h5>Student Assistant</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                I worked as a student assistent at my faculty to welcome and guide new students during their first semster.
+                                Among other things this included answering questions about the curriculum, offering insider tips, 
+                                and sharing personal experience in weekly meetings.
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">March 2020 - August 2020</p>
+                                <h3 class="item-title"><a href="https://www.curaluna.de/" target="_blank">Curaluna</a></h3>
+                                <h5>Trainee</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                I worked as a trainee in this startup known from "Die Höhle der Löwen", a tv show similar to "Shark Tank" for six moth. 
+                                Working there I did a lot of data acquisition and processing as well as developing frontend and backend systems. Througought the
+                                internship I learned a lot about entrepreneurship.
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">September 2019 - February 2020</p>
+                                <h3 class="item-title"><a href="https://www.facebook.com/pages/category/School/Paradanusorn-School-164577643945545/" target="_blank">Paradanusorn School</a></h3>
+                                <h5>Volunteer</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                I worked at Paradanusorn school, located in the north of Thailand, as a voluntary english teacher assistent.
+                                Througought my time spent here I faced the challenges of teaching other people. Additionally I learned a lot about 
+                                a culture I didn't know anything about in advance.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="column large-half tab-full" data-aos="fade-up">
+                    <div class="timeline">
+
+                        <div class="timeline__icon-wrap">
+                            <span class="timeline__icon timeline__icon--education"></span>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">October 2020 - Present</p>
+                                <h3 class="item-title"><a href="https://www.tu-darmstadt.de/" target="_blank">Technische Universität Darmstadt</a></h3>
+                                <h5>Bachelor Degree</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                In my ongoing studies at Technische Universität Darmstadt I have an extensive teaching program in the field of computer science and 
+                                business informatics in addition to a sound economic education in business administration and economics. 
+                                The courses are rounded off by the fundamentals of mathematics and law.
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">August 2022 - Mai 2023</p>
+                                <h3 class="item-title"><a href="https://www.siit.tu.ac.th/" target="_blank">Thammasat University</a></h3>
+                                <h5>Bachelor Degree</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                During my 2 semesters as an exchange student at Sirindhorn International Institute of Technology in Bangkok,
+                                I learned how to work in an International team. Furthermore I deepened my knowledge in digital forensics and 
+                                machine learing, as well as natural language processing.
+                            </div>
+                        </div>
+
+                        <div class="timeline__block">
+                            <div class="timeline__bullet"></div>
+                            <div class="timeline__header">
+                                <p class="timeline__timeframe">August 2011 - July 2019</p>
+                                <h3 class="item-title"><a href="https://www.main-taunus-schule.de/" target="_blank">Main-Taunus-Schule</a></h3>
+                                <h5>Abitur</h5>
+                            </div>
+                            <div class="timeline__desc">
+                                During high school I took my first IT class which sparked my passion in that field and lead me to study what I study today.
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end about-experience -->
+
+    </section> <!-- end s-about -->
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+
+        <div class="row heading-block heading-block--center" data-aos="fade-up">
+            <div class="column large-full">
+                <h2 class="section-heading section-heading--centerbottom">Works</h2>
+                <p class="section-desc">
+                    In progress - Stay tuned!
+                </p>
+            </div>
+        </div> <!-- end heading-block -->
+
+    </section> <!-- end s-work -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="column large-full ss-copyright">
+                <span>© 2023 Levin Kaus</span> 
+                <span><a href="https://www.styleshout.com/" target="_blank">Credits</a></span>
+            </div>            
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
-</html>
