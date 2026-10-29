@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+    <title>Levin Kaus – IAM Architect &amp; Trainer</title>
+    <meta name="description" content="Levin Kaus ist IAM Architect bei umbrella.associates und gibt eintägige Trainings zu IAM für Agentic AI. Schwerpunkte: Auth0, Entra ID, Identity Governance und Privileged Access.">
+    <meta name="author" content="Levin Kaus">
+    <link rel="canonical" href="https://levinkaus.de/de/">
+    <link rel="alternate" hreflang="en" href="https://levinkaus.de/">
+    <link rel="alternate" hreflang="de" href="https://levinkaus.de/de/">
+    <link rel="alternate" hreflang="x-default" href="https://levinkaus.de/">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="Levin Kaus">
+    <meta property="og:title" content="Levin Kaus – IAM Architect &amp; Trainer">
+    <meta property="og:description" content="IAM Architect und Trainer: Customer und Workforce Identity, Governance, Privileged Access und IAM für Agentic AI.">
+    <meta property="og:url" content="https://levinkaus.de/de/">
+    <meta property="og:image" content="https://levinkaus.de/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Levin Kaus – IAM Architect &amp; Trainer">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="profile:first_name" content="Levin">
+    <meta property="profile:last_name" content="Kaus">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="../images/favicons/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/apple-touch-icon.png">
+    <link rel="manifest" href="../images/favicons/site.webmanifest">
+
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Levin Kaus",
+        "url": "https://levinkaus.de/de/",
+        "jobTitle": ["IAM Architect", "IAM Trainer"],
+        "image": "https://levinkaus.de/images/headshot.jpg",
+        "description": "IAM Architect und Trainer mit Schwerpunkt Customer Identity, Identity Governance, Privileged Access und IAM für Agentic AI.",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "umbrella.associates",
+            "url": "https://www.umbrella.associates"
+        },
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "Technische Universität Darmstadt", "url": "https://www.tu-darmstadt.de/" },
+            { "@type": "CollegeOrUniversity", "name": "Sirindhorn International Institute of Technology, Thammasat University" }
+        ],
+        "knowsAbout": [
+            "Identity and Access Management",
+            "Customer Identity and Access Management",
+            "Identity Governance and Administration",
+            "Privileged Access Management",
+            "Identity Threat Detection and Response",
+            "Single Sign-On",
+            "Multi-Factor Authentication",
+            "Conditional Access",
+            "OAuth 2.1",
+            "OpenID Connect",
+            "FIDO2",
+            "Zero Trust",
+            "Fine-grained authorization",
+            "Policy-based access control",
+            "AuthZEN",
+            "Open Policy Agent",
+            "Rego",
+            "Python",
+            "Django",
+            "FastAPI",
+            "Jinja",
+            "IAM for agentic AI",
+            "Model Context Protocol",
+            "EU AI Act",
+            "DORA",
+            "Auth0",
+            "authentik",
+            "BeyondTrust",
+            "cidaas",
+            "CyberArk",
+            "Microsoft Entra ID",
+            "Omada",
+            "Silverfort",
+            "Swift",
+            "iOS-Entwicklung"
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/in/levinkaus/",
+            "https://github.com/levinKaus"
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header">
+        <nav class="nav container" aria-label="Hauptnavigation">
+            <a class="nav__brand" href="#top">Levin Kaus</a>
+
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+                    aria-label="Menü öffnen" data-label-open="Menü öffnen" data-label-close="Menü schließen">
+                <span class="nav__toggle-bars" aria-hidden="true"></span>
+            </button>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__links">
+                    <li><a href="#expertise">Expertise</a></li>
+                    <li><a href="#training">Training</a></li>
+                    <li><a href="#experience">Werdegang</a></li>
+                    <li><a href="#swift">Swift</a></li>
+                    <li><a href="#venture">HeyOishii</a></li>
+                </ul>
+
+                <div class="lang">
+                    <span class="lang__display" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>DE</span>
+                    <select class="lang__select" aria-label="Sprache">
+                        <option value="../" lang="en">English</option>
+                        <option value="./" lang="de" selected>Deutsch</option>
+                    </select>
+                    <!-- Without JavaScript the select cannot navigate, so a plain link is shown instead -->
+                    <a class="lang__fallback" href="../" hreflang="en" lang="en"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>English</a>
+                </div>
+
+                <a class="button button--small" href="#contact">Kontakt</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- Hero -->
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="container hero__grid">
+                <div>
+                    <h1 id="hero-title">
+                        <span class="hero__name">Levin Kaus</span>
+                        <span class="hero__role">IAM Architect &amp; Trainer.</span>
+                    </h1>
+                    <p class="hero__lead">
+                        Ich unterstütze Unternehmen dabei, Identitäten zu verwalten, Zugriffe abzusichern und passende Berechtigungskonzepte für Mitarbeitende, Kunden und KI-Agenten umzusetzen.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="button" href="#contact">Kontakt aufnehmen</a>
+                        <a class="link-more" href="../files/lebenslauf.pdf" type="application/pdf" download="Levin-Kaus-Lebenslauf.pdf">Lebenslauf herunterladen</a>
+                    </div>
+                    <dl class="hero__facts">
+                        <div class="hero__facts-wide"><dt><strong>Auth0</strong> · BeyondTrust · cidaas · CyberArk · Entra ID · Omada · Silverfort</dt><dd>Plattformen · Schwerpunkt auf Auth0</dd></div>
+                        <div><dt><strong>umbrella.associates</strong></dt><dd>IAM-Beratung</dd></div>
+                        <div><dt><strong>IAM für Agentic AI</strong></dt><dd>Eintägige Trainings</dd></div>
+                        <div><dt><strong>M.Sc. Wirtschaftsinformatik</strong></dt><dd>TU Darmstadt</dd></div>
+                    </dl>
+                </div>
+                <picture class="portrait">
+                    <source srcset="../images/headshot.avif" type="image/avif">
+                    <img src="../images/headshot.jpg" width="880" height="1100" alt="Porträt von Levin Kaus" fetchpriority="high" decoding="async">
+                </picture>
+            </div>
+        </section>
+
+        <!-- IAM-Expertise -->
+        <section class="section section--alt" id="expertise" aria-labelledby="expertise-title">
+            <div class="container">
+                <header class="section__header reveal">
+                    <p class="eyebrow">Identity &amp; Access Management</p>
+                    <h2 class="section__title" id="expertise-title">Der richtige Zugriff für jede Identität.</h2>
+                    <p class="section__lead">
+                        Bei umbrella.associates unterstütze ich Unternehmen bei der Konzeption und Umsetzung sicherer IAM-Lösungen in den Bereichen Kunden- und Mitarbeiteridentitäten, granulare Autorisierung, Identity Governance und privilegierte Zugriffe.
+                    </p>
+                </header>
+
+                <article class="spotlight reveal" id="training" aria-labelledby="training-title">
+                    <div>
+                        <p class="card__badge">Eintägiges Training</p>
+                        <h3 class="spotlight__title" id="training-title">IAM für Agentic AI</h3>
+                        <p class="spotlight__text">KI-Agenten benötigen sicheren Zugriff auf Unternehmenssysteme und stellen das Identity &amp; Access Management vor neue Herausforderungen.</p>
+                    </div>
+                    <div class="spotlight__aside">
+                        <p>Gemeinsam mit <a href="https://qskills.de/de-de/training/ai330-identity-access-management-iam-in-agentic-ai" target="_blank" rel="noopener noreferrer">qSkills</a> biete ich ein eintägiges Training zu Authentifizierung, OAuth, delegierten Zugriffen, dem Model Context Protocol (MCP) und der Governance von KI-Agenten an.</p>
+                        <dl class="spotlight__facts">
+                            <div><dt>Zielgruppe</dt><dd>IAM Engineers, IAM Architects, IT-Sicherheitsexperten und Plattformteams.</dd></div>
+                            <div><dt>Format</dt><dd>Ein Tag · Online oder vor Ort · Deutsch</dd></div>
+                        </dl>
+                    </div>
+                </article>
+
+                <ul class="grid grid--2">
+                    <li class="card card--primary reveal">
+                        <p class="card__badge">Schwerpunkt</p>
+                        <svg class="card__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="20" r="6"/><path d="M20 20h15M30 20v5M35 20v4"/></svg>
+                        <h3 class="card__title">Customer Identity &amp; SSO</h3>
+                        <p class="card__text">Sichere Kundenauthentifizierung, Single Sign-on und MFA mit OAuth 2.1 und OpenID Connect.</p>
+                        <p class="card__meta">Auth0 · cidaas</p>
+                    </li>
+                    <li class="card card--primary reveal">
+                        <p class="card__badge">Schwerpunkt</p>
+                        <svg class="card__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 5l12 5v9c0 8-5.2 13.5-12 16-6.8-2.5-12-8-12-16v-9z"/><path d="M15 20h10M15 25h6M15 15h10"/></svg>
+                        <h3 class="card__title">Fine-grained Authorization</h3>
+                        <p class="card__text">Konzeption richtlinienbasierter Zugriffskontrolle mit PDP-, PEP-, PAP- und PIP-Architekturen sowie AuthZEN und Open Policy Agent (OPA) für konsistente Autorisierungsentscheidungen.</p>
+                        <p class="card__meta">AuthZEN · Open Policy Agent (OPA)</p>
+                    </li>
+                    <li class="card reveal">
+                        <svg class="card__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="9" width="28" height="19" rx="3"/><path d="M14 33h12M20 28v5"/><path d="M16 18.5l3 3 6-6"/></svg>
+                        <h3 class="card__title">Workforce Identity</h3>
+                        <p class="card__text">Conditional Access, SSO, MFA und passwortlose Authentifizierung mit Microsoft Entra ID und FIDO2-Sicherheitsschlüsseln.</p>
+                        <p class="card__meta">Microsoft Entra ID</p>
+                    </li>
+                    <li class="card reveal">
+                        <svg class="card__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="15" cy="13" r="5"/><path d="M5 31c0-5.5 4.5-9 10-9s10 3.5 10 9"/><path d="M26 18l3 3 6-6"/></svg>
+                        <h3 class="card__title">Identity Governance</h3>
+                        <p class="card__text">Identity-Lifecycle-Management, Rollenmodelle, Access Reviews und Rezertifizierung zur Durchsetzung von Least-Privilege-Zugriffen.</p>
+                        <p class="card__meta">Omada</p>
+                    </li>
+                    <li class="card reveal">
+                        <svg class="card__icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="18" width="22" height="16" rx="3"/><path d="M14 18v-5a6 6 0 0 1 12 0v5"/><path d="M20 24v4"/></svg>
+                        <h3 class="card__title">Privileged Access &amp; Identity Threats</h3>
+                        <p class="card__text">Absicherung privilegierter Konten durch Zugriffskontrollen, Überprüfung von Rollen und Richtlinien sowie Identity Threat Detection and Response.</p>
+                        <p class="card__meta">CyberArk · BeyondTrust · Silverfort</p>
+                    </li>
+                </ul>
+
+                <div class="chip-groups">
+                    <section class="chip-group reveal" aria-labelledby="skills-0">
+                        <h3 class="chip-group__title" id="skills-0">Plattformen &amp; Technologien</h3>
+                        <ul class="chips">
+                            <li class="chip chip--primary">Auth0</li>
+                            <li class="chip chip--primary">authentik</li>
+                            <li class="chip">BeyondTrust</li>
+                            <li class="chip">cidaas</li>
+                            <li class="chip">CyberArk</li>
+                            <li class="chip">Microsoft Entra ID</li>
+                            <li class="chip">Omada</li>
+                            <li class="chip">Open Policy Agent (OPA)</li>
+                            <li class="chip">Silverfort</li>
+                        </ul>
+                    </section>
+                    <section class="chip-group reveal" aria-labelledby="skills-1">
+                        <h3 class="chip-group__title" id="skills-1">Standards &amp; Methoden</h3>
+                        <ul class="chips">
+                            <li class="chip chip--primary">AuthZEN</li>
+                            <li class="chip chip--primary">OpenID Connect</li>
+                            <li class="chip chip--primary">PDP / PEP / PAP / PIP</li>
+                            <li class="chip">Access Reviews &amp; Rezertifizierung</li>
+                            <li class="chip">Conditional Access</li>
+                            <li class="chip">FIDO2</li>
+                            <li class="chip">Fine-grained Authorization (FGA)</li>
+                            <li class="chip">Identity-Lifecycle-Management</li>
+                            <li class="chip">Least Privilege</li>
+                            <li class="chip">MFA</li>
+                            <li class="chip">Model Context Protocol (MCP)</li>
+                            <li class="chip">OAuth 2.1</li>
+                            <li class="chip">Richtlinienbasierte Zugriffskontrolle</li>
+                            <li class="chip">Rollenbasierte Zugriffskontrolle (RBAC)</li>
+                            <li class="chip">SSO</li>
+                            <li class="chip">Zero Trust</li>
+                        </ul>
+                    </section>
+                    <section class="chip-group reveal" aria-labelledby="skills-dev">
+                        <h3 class="chip-group__title" id="skills-dev">Entwicklung</h3>
+                        <ul class="chips">
+                            <li class="chip chip--primary">FastAPI</li>
+                            <li class="chip chip--primary">Swift</li>
+                            <li class="chip">Django</li>
+                            <li class="chip">Jinja</li>
+                            <li class="chip">Python</li>
+                            <li class="chip">Rego</li>
+                        </ul>
+                    </section>
+                    <section class="chip-group reveal" aria-labelledby="skills-2">
+                        <h3 class="chip-group__title" id="skills-2">Weiteres Fachwissen</h3>
+                        <ul class="chips">
+                            <li class="chip">Active Directory</li>
+                            <li class="chip">BSI IT-Grundschutz</li>
+                            <li class="chip">DORA</li>
+                            <li class="chip">DSGVO</li>
+                            <li class="chip">EU AI Act</li>
+                            <li class="chip">ISO 27001</li>
+                            <li class="chip">Just-in-Time-Zugriff</li>
+                            <li class="chip">Keycloak</li>
+                            <li class="chip">NIS2</li>
+                            <li class="chip">Okta</li>
+                            <li class="chip">SCIM</li>
+                            <li class="chip">Session Recording</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <dl class="facts reveal">
+                    <div>
+                        <dt>Branchenerfahrung</dt>
+                        <dd>Banken · Versicherungen · Handel</dd>
+                    </div>
+                </dl>
+
+                <section class="badges reveal" aria-labelledby="badges-title" data-status="{n} von {total} Badges">
+                    <h3 class="chip-group__title" id="badges-title">Zertifizierungen &amp; Badges</h3>
+                    <div class="badge-filter" role="group" aria-label="Badges filtern">
+                        <button type="button" data-filter="highlight" aria-pressed="true">Highlights <span class="badge-filter__count">8</span></button>
+                        <button type="button" data-filter="all" aria-pressed="false">Alle <span class="badge-filter__count">31</span></button>
+                        <button type="button" data-filter="ciam" aria-pressed="false">Customer Identity <span class="badge-filter__count">9</span></button>
+                        <button type="button" data-filter="ai" aria-pressed="false">KI-Agenten <span class="badge-filter__count">3</span></button>
+                        <button type="button" data-filter="bp" aria-pressed="false">Security Best Practices <span class="badge-filter__count">9</span></button>
+                        <button type="button" data-filter="workforce" aria-pressed="false">Workforce Identity <span class="badge-filter__count">6</span></button>
+                        <button type="button" data-filter="pam" aria-pressed="false">Privileged Access <span class="badge-filter__count">2</span></button>
+                        <button type="button" data-filter="itdr" aria-pressed="false">Identity Protection <span class="badge-filter__count">2</span></button>
+                    </div>
+                    <p class="visually-hidden" role="status" aria-live="polite"></p>
+                    <ul class="badges__grid">
+                        <li data-tags="ciam highlight">
+                            <a class="badge" href="https://www.credly.com/badges/1f60be65-d6e2-4b3a-a136-d7f0bbcd5c53" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/auth0-specialist.avif" type="image/avif">
+                                    <img src="../images/badges/auth0-specialist.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Auth0 Specialist</span>
+                                <span class="badge__meta">Okta · 2024</span>
+                            </a>
+                        </li>
+                        <li data-tags="pam highlight">
+                            <a class="badge" href="https://www.credly.com/badges/81cf10da-81e9-438f-ad12-7de13a5351bf" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/beyondtrust-certified-solutions-engineer-essentials-password-safe.avif" type="image/avif">
+                                    <img src="../images/badges/beyondtrust-certified-solutions-engineer-essentials-password-safe.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">BeyondTrust Certified Solutions Engineer Essentials – Password Safe</span>
+                                <span class="badge__meta">BeyondTrust · 2026</span>
+                            </a>
+                        </li>
+                        <li data-tags="pam highlight">
+                            <a class="badge" href="https://www.credly.com/badges/4ab4aa0f-4f45-44c6-b0d4-461a4e0247d8" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/beyondtrust-certified-solutions-engineer-essentials-privileged-remote-access.avif" type="image/avif">
+                                    <img src="../images/badges/beyondtrust-certified-solutions-engineer-essentials-privileged-remote-access.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">BeyondTrust Certified Solutions Engineer Essentials – Privileged Remote Access</span>
+                                <span class="badge__meta">BeyondTrust · 2026</span>
+                            </a>
+                        </li>
+                        <li data-tags="itdr highlight">
+                            <a class="badge badge--cert" href="../images/badges/silverfort-unified-expert-certification.jpg" target="_blank" rel="noopener noreferrer" aria-label="Silverfort Unified Expert Certification – öffnet das Zertifikat">
+                                <picture>
+                                    <source srcset="../images/badges/silverfort-unified-expert-certification-320.avif" type="image/avif">
+                                    <img src="../images/badges/silverfort-unified-expert-certification-320.jpg" width="320" height="180" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Silverfort Unified Expert Certification</span>
+                                <span class="badge__meta">Silverfort Academy</span>
+                            </a>
+                        </li>
+                        <li data-tags="itdr highlight">
+                            <a class="badge badge--cert" href="../images/badges/silverfort-unified-professional-certification.jpg" target="_blank" rel="noopener noreferrer" aria-label="Silverfort Unified Professional Certification – öffnet das Zertifikat">
+                                <picture>
+                                    <source srcset="../images/badges/silverfort-unified-professional-certification-320.avif" type="image/avif">
+                                    <img src="../images/badges/silverfort-unified-professional-certification-320.jpg" width="320" height="180" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Silverfort Unified Professional Certification</span>
+                                <span class="badge__meta">Silverfort Academy</span>
+                            </a>
+                        </li>
+                        <li data-tags="ai highlight">
+                            <a class="badge" href="https://www.credly.com/badges/6eb801c7-3062-42b8-985b-9c189434c9ec" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/okta-for-ai-agents.avif" type="image/avif">
+                                    <img src="../images/badges/okta-for-ai-agents.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Okta for AI Agents</span>
+                                <span class="badge__meta">Okta · 2026</span>
+                            </a>
+                        </li>
+                        <li data-tags="ai highlight">
+                            <a class="badge" href="https://www.credly.com/badges/74bf2a36-46ff-48bc-a157-581952951a43" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/secure-your-ai-agents-to-act-on-the-behalf-of-users.avif" type="image/avif">
+                                    <img src="../images/badges/secure-your-ai-agents-to-act-on-the-behalf-of-users.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Secure Your AI Agents to Act on the Behalf of Users</span>
+                                <span class="badge__meta">Okta · 2026</span>
+                            </a>
+                        </li>
+                        <li data-tags="workforce highlight">
+                            <a class="badge" href="https://www.credly.com/badges/98d4fb59-642d-4acc-83cd-14ac62d20692" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/implement-phishing-resistant-authentication.avif" type="image/avif">
+                                    <img src="../images/badges/implement-phishing-resistant-authentication.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Implement Phishing-Resistant Authentication</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/f57cc1ae-b2c5-4464-abec-4d4578b64710" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/user-registration-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/user-registration-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">User Registration Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/96faaae5-c400-4624-b106-8c82f67e1bb6" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/manage-auth0-users.avif" type="image/avif">
+                                    <img src="../images/badges/manage-auth0-users.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Manage Auth0 Users</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/af58b205-8cb2-4ad4-8ffe-acdfb2a0bd20" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/secure-applications-with-auth0-attack-protection.avif" type="image/avif">
+                                    <img src="../images/badges/secure-applications-with-auth0-attack-protection.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Secure Applications with Auth0 Attack Protection</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="workforce">
+                            <a class="badge" href="https://www.credly.com/badges/9cc64a02-1ce7-4424-878a-27046ef11e7c" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/set-up-enterprise-inbound-federation.avif" type="image/avif">
+                                    <img src="../images/badges/set-up-enterprise-inbound-federation.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Set Up Enterprise Inbound Federation</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/452915ae-710d-4828-bb06-3f84c0b474b1" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/logging-and-monitoring-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/logging-and-monitoring-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Logging and Monitoring Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/490a0fe2-db07-438d-984b-376f83a87f8f" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/mfa-bypass-attack-prevention-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/mfa-bypass-attack-prevention-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">MFA Bypass Attack Prevention Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/bcdc8668-2def-4341-b0af-9af0d287e685" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/demystify-auth0-logout-scenarios.avif" type="image/avif">
+                                    <img src="../images/badges/demystify-auth0-logout-scenarios.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Demystify Auth0 Logout Scenarios</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/c2ec972f-b575-40ed-a6f6-3ac85b074e85" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/authentication-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/authentication-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Authentication Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/067bb841-a23a-4bc3-9786-8ef2900cb61e" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/authorization-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/authorization-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Authorization Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ai">
+                            <a class="badge" href="https://www.credly.com/badges/81f49f7a-3c50-4ff4-a014-cf9ad3977381" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/secure-ai-workflows-with-auth0-for-ai-agents.avif" type="image/avif">
+                                    <img src="../images/badges/secure-ai-workflows-with-auth0-for-ai-agents.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Secure AI Workflows with Auth0 for AI Agents</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/ff64364b-c5ed-4171-9cf2-0700d57ac886" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/secure-auth0-apps-with-mfa.avif" type="image/avif">
+                                    <img src="../images/badges/secure-auth0-apps-with-mfa.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Secure Auth0 Apps with MFA</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/ed2aedca-74e8-4b9e-94ce-a4371393b588" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/innovations-for-secure-experiences.avif" type="image/avif">
+                                    <img src="../images/badges/innovations-for-secure-experiences.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Innovations for Secure Experiences</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/c94793d9-638f-4824-a026-bf3ecf201009" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/manage-b2b-users-and-applications-with-auth0.avif" type="image/avif">
+                                    <img src="../images/badges/manage-b2b-users-and-applications-with-auth0.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Manage B2B Users and Applications with Auth0</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/a53554b0-969d-45bc-9b41-449205c19385" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/session-and-token-management-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/session-and-token-management-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Session and Token Management Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/8a161775-4dde-4240-8177-b19d1a9d8a9a" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/authenticate-with-auth0-social-and-enterprise-connections.avif" type="image/avif">
+                                    <img src="../images/badges/authenticate-with-auth0-social-and-enterprise-connections.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Authenticate with Auth0 Social and Enterprise Connections</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="workforce">
+                            <a class="badge" href="https://www.credly.com/badges/253972d5-8078-4b3f-a7c9-76e0a0765993" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/define-a-secure-policy-structure.avif" type="image/avif">
+                                    <img src="../images/badges/define-a-secure-policy-structure.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Define a Secure Policy Structure</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="workforce">
+                            <a class="badge" href="https://www.credly.com/badges/e2f549b2-3882-41e0-bd38-024d25a8210c" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/define-your-users-in-okta.avif" type="image/avif">
+                                    <img src="../images/badges/define-your-users-in-okta.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Define Your Users in Okta</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/c7388aab-c6cb-41f2-beee-b3150f007b9d" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/discover-the-differences-among-auth0-application-types.avif" type="image/avif">
+                                    <img src="../images/badges/discover-the-differences-among-auth0-application-types.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Discover the Differences Among Auth0 Application Types</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/a35cf7c8-e8c6-4d43-b1ea-6e7594cccffe" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/extend-auth0-with-actions.avif" type="image/avif">
+                                    <img src="../images/badges/extend-auth0-with-actions.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Extend Auth0 with Actions</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="workforce">
+                            <a class="badge" href="https://www.credly.com/badges/fc0d2945-3ddd-47b1-8d89-d39759687b16" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/manage-user-profiles-in-ud.avif" type="image/avif">
+                                    <img src="../images/badges/manage-user-profiles-in-ud.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Manage User Profiles in UD</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="workforce">
+                            <a class="badge" href="https://www.credly.com/badges/0ae3e94a-b8f2-4ed9-81e5-c074f56a42e6" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/explore-identity-foundations.avif" type="image/avif">
+                                    <img src="../images/badges/explore-identity-foundations.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Explore Identity Foundations</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="ciam">
+                            <a class="badge" href="https://www.credly.com/badges/b1de5542-ea45-4fa2-b8c8-7546a193dcda" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/get-started-with-auth0-tenants.avif" type="image/avif">
+                                    <img src="../images/badges/get-started-with-auth0-tenants.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Get Started with Auth0 Tenants</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                        <li data-tags="bp">
+                            <a class="badge" href="https://www.credly.com/badges/ce778380-7c8d-4f1c-a58f-b12f8097a1c9" target="_blank" rel="noopener noreferrer">
+                                <picture>
+                                    <source srcset="../images/badges/planning-and-configuration-best-practices.avif" type="image/avif">
+                                    <img src="../images/badges/planning-and-configuration-best-practices.png" width="80" height="80" alt="" loading="lazy" decoding="async">
+                                </picture>
+                                <span class="badge__name" lang="en">Planning and Configuration Best Practices</span>
+                                <span class="badge__meta">Okta · 2025</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <p class="section__footer reveal"><a class="link-more" href="#contact">Über ein Projekt oder Training sprechen</a></p>
+            </div>
+        </section>
+
+        <!-- Werdegang -->
+        <section class="section" id="experience" aria-labelledby="experience-title">
+            <div class="container">
+                <header class="section__header reveal">
+                    <p class="eyebrow">Werdegang</p>
+                    <h2 class="section__title" id="experience-title">Wo ich gearbeitet habe.</h2>
+                </header>
+
+                <article class="feature reveal">
+                    <div>
+                        <p class="feature__when">Okt. 2024 – heute</p>
+                        <h3 class="feature__org"><a href="https://www.umbrella.associates" target="_blank" rel="noopener noreferrer">umbrella.associates</a></h3>
+                        <p class="feature__role">Werkstudent → IAM Architect</p>
+                    </div>
+                    <ul class="feature__list">
+                        <li>Konzeption und Umsetzung von Customer-Identity-Lösungen mit Auth0, OAuth und OpenID Connect.</li>
+                        <li>Mitarbeit am Projekt Föderale API-Autorisierungsinfrastruktur mit Schwerpunkt auf Fine-grained Authorization, richtlinienbasierter Zugriffskontrolle und AuthZEN.</li>
+                        <li>IAM-Trainer für qSkills: Durchführung von Schulungen zu IAM für Agentic AI und Vertretung des Trainingsprogramms auf der it-sa.</li>
+                        <li>Tätigkeiten in Identity Governance, Privileged Access und Workforce Identity, u. a. mit Omada, CyberArk und Microsoft Entra ID.</li>
+                    </ul>
+                </article>
+
+                <article class="project reveal" aria-labelledby="asg-title">
+                    <div class="project__logo">
+                        <img src="../images/application-supply-guard.svg" width="182" height="70" alt="Logo von Application Supply Guard" loading="lazy" decoding="async">
+                    </div>
+                    <div>
+                        <p class="eyebrow">Schlüsselprojekt · umbrella.associates</p>
+                        <h3 class="project__title" id="asg-title">Application Supply Guard</h3>
+                        <p class="project__tagline" lang="en">„Because binaries don’t tell lies.“</p>
+                        <p class="project__text">Ein Service für Software-Supply-Chain-Security: Er analysiert Binärdateien, Docker-Images und Container und erstellt eine SBOM und einen Risikobericht – für Compliance mit DORA, NIS2 und dem Cyber Resilience Act.</p>
+                        <p class="project__text">Als eines von vier aktiven Teammitgliedern habe ich an allen Teilen der Web-App mitgearbeitet – von der Konzeption bis zur Umsetzung, u. a. Auth0, FastAPI-Backend, MongoDB, ReversingLabs-Integration und Stripe-Zahlungen. Außerdem habe ich bei der Landingpage und beim Hosting mit Portainer über Dev, Test und Produktion unterstützt.</p>
+                        <ul class="chips project__tech" aria-label="Technologien">
+                            <li class="chip">Auth0</li>
+                            <li class="chip">FastAPI</li>
+                            <li class="chip">Jinja</li>
+                            <li class="chip">MongoDB</li>
+                            <li class="chip">Portainer</li>
+                            <li class="chip">ReversingLabs</li>
+                            <li class="chip">Stripe</li>
+                        </ul>
+                        <p><a class="link-more" href="https://application.supply/" target="_blank" rel="noopener noreferrer">application.supply besuchen</a></p>
+                    </div>
+                </article>
+
+                <article class="project reveal" aria-labelledby="fai-title">
+                    <div class="project__logo">
+                        <picture>
+                            <source srcset="../images/foederale-api-logo-320.avif" type="image/avif">
+                            <img class="project__logo-square" src="../images/foederale-api-logo-320.png" width="320" height="319" alt="Logo der Föderalen API-Autorisierungsinfrastruktur" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <div>
+                        <p class="eyebrow">Schlüsselprojekt · umbrella.associates</p>
+                        <h3 class="project__title" id="fai-title">Föderale API-Autorisierungs&shy;infrastruktur</h3>
+                        <p class="project__tagline">Projekt des IT-Planungsrats</p>
+                        <p class="project__text">Einheitliche Sicherheitsvorgaben und eine Zielarchitektur für die API-Autorisierung im föderalen Kontext – für Basisdienste wie FIT-Connect, NOOTS und Bezahldienste. Alle Ergebnisse werden als Open Source auf openCode veröffentlicht.</p>
+                        <p class="project__text">Mein Schwerpunkt im Projekt: Fine-grained Authorization, richtlinienbasierte Zugriffskontrolle und AuthZEN.</p>
+                        <ul class="chips project__tech" aria-label="Technologien">
+                            <li class="chip">AuthZEN</li>
+                            <li class="chip">Fine-grained Authorization</li>
+                            <li class="chip">OAuth 2.1</li>
+                            <li class="chip">OpenID Connect</li>
+                            <li class="chip">Richtlinienbasierte Zugriffskontrolle</li>
+                        </ul>
+                        <p><a class="link-more" href="https://gitlab.opencode.de/sachsen-anhalt/mid/foederale-api-autorisierungsinfrastruktur" target="_blank" rel="noopener noreferrer">Projekt auf openCode ansehen</a></p>
+                    </div>
+                </article>
+
+                <article class="oss reveal" aria-labelledby="authlib-title">
+                    <div>
+                        <p class="eyebrow">Open Source</p>
+                        <h3 class="oss__title" id="authlib-title">Authlib</h3>
+                        <p class="oss__text">Eine weit verbreitete Python-Bibliothek für OAuth-2.0- und OpenID-Connect-Clients und -Server. Zwei meiner Beiträge wurden übernommen:</p>
+                        <p><a class="link-more" href="https://github.com/authlib/authlib" target="_blank" rel="noopener noreferrer">Authlib auf GitHub</a></p>
+                    </div>
+                    <ul class="oss__prs">
+                            <li>
+                                <a href="https://github.com/authlib/authlib/pull/911" target="_blank" rel="noopener noreferrer" aria-label="Pull Request #911">#911</a>
+                                <span>Fix: <code>sub</code>-Claim im <code>JWTBearerTokenGenerator</code> als String ausgeben</span>
+                                <span class="oss__when">Juli 2026</span>
+                            </li>
+                            <li>
+                                <a href="https://github.com/authlib/authlib/pull/909" target="_blank" rel="noopener noreferrer" aria-label="Pull Request #909">#909</a>
+                                <span>Feature: httpx2 statt httpx im Client</span>
+                                <span class="oss__when">Juli 2026</span>
+                            </li>
+                    </ul>
+                </article>
+
+                <div class="timeline-grid">
+                    <section class="reveal" aria-labelledby="work-title">
+                        <h3 class="timeline__heading" id="work-title">Berufserfahrung</h3>
+                        <ol class="timeline">
+                        <li class="timeline__item">
+                            <p class="timeline__when">Juli 2025 – heute</p>
+                            <p class="timeline__org"><a href="#venture">HeyOishii</a> · <span class="timeline__role">Mitgründer &amp; CEO</span></p>
+                            <p class="timeline__text">Gemeinsam gegründeter Onlineshop für asiatische Lebensmittel, der Unternehmertum, E-Commerce und unsere Leidenschaft für asiatisches Essen verbindet.</p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Sept. 2023 – Sept. 2025</p>
+                            <p class="timeline__org"><a href="https://www.tu-darmstadt.de/irep" target="_blank" rel="noopener noreferrer">TU Darmstadt, Dezernat Internationales</a> · <span class="timeline__role">Studentische Hilfskraft</span></p>
+                            <p class="timeline__text">Koordination der Austauschprogramme mit Nordamerika und Singapur sowie der Kommunikation mit Studierenden und internationalen Partneruniversitäten.</p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Okt. 2023 – März 2024</p>
+                            <p class="timeline__org"><a href="https://www.invensity.com/" target="_blank" rel="noopener noreferrer">INVENSITY</a> · <span class="timeline__role">Praktikant</span></p>
+                            <p class="timeline__text">Entwicklung einer DSGVO-konformen iOS-App zur Anruferkennung für Unternehmen mit Swift und der Microsoft Graph API.</p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Okt. 2021 – März 2022</p>
+                            <p class="timeline__org"><a href="https://www.wi.tu-darmstadt.de/fachbereich/index.en.jsp" target="_blank" rel="noopener noreferrer">TU Darmstadt, Fachbereich Rechts- und Wirtschaftswissenschaften</a> · <span class="timeline__role">Studentische Hilfskraft</span></p>
+                            <p class="timeline__text">Unterstützung von Erstsemestern beim Übergang an die Universität durch Orientierung und persönliche Betreuung während des ersten Semesters.</p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">März 2020 – Aug. 2020</p>
+                            <p class="timeline__org"><a href="https://www.curaluna.de/" target="_blank" rel="noopener noreferrer">CURALUNA</a> · <span class="timeline__role">Praktikant</span></p>
+                            <p class="timeline__text">Datenbankpflege, Analyse des deutschen Gesundheitsmarkts und Betreuung des Website-Frontends mit ersten Einblicken ins Unternehmertum.</p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Sept. 2019 – Jan. 2020</p>
+                            <p class="timeline__org"><a href="https://www.facebook.com/pages/category/School/Paradanusorn-School-164577643945545/" target="_blank" rel="noopener noreferrer">Paradanusorn School</a> · <span class="timeline__role">Ehrenamtlicher Englischlehrer</span></p>
+                            <p class="timeline__text">Englischunterricht in Nordthailand und Zusammenarbeit mit internationalen Freiwilligen zur Gestaltung einer motivierenden Lernumgebung.</p>
+                        </li>
+                        </ol>
+                    </section>
+
+                    <section class="reveal" aria-labelledby="education-title">
+                        <h3 class="timeline__heading" id="education-title">Ausbildung</h3>
+                        <ol class="timeline">
+                        <li class="timeline__item">
+                            <p class="timeline__when">Okt. 2024 – Okt. 2026</p>
+                            <p class="timeline__org"><a href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer">Technische Universität Darmstadt</a> · <span class="timeline__role">M.Sc. Wirtschaftsinformatik</span></p>
+                            <p class="timeline__grade">Abschlussnote 1,50</p>
+                            <p class="timeline__text">Masterstudium der Wirtschaftsinformatik mit Schwerpunkt IT-Sicherheit.</p>
+                            <p class="timeline__text">Masterseminar am <a href="https://www.sit.fraunhofer.de/" target="_blank" rel="noopener noreferrer">Fraunhofer SIT</a> mit dem Paper <q lang="en">Memorization in LLMs – A Survey on Attacks, Defenses, and Verification</q>.</p>
+                            <p class="timeline__text"><span class="timeline__label">Masterarbeit:</span> <q lang="en">A Modular Traffic Simulation Architecture for Urban Environments – Design and Evaluation in Unreal Engine</q></p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Okt. 2020 – Sept. 2024</p>
+                            <p class="timeline__org"><a href="https://www.tu-darmstadt.de/" target="_blank" rel="noopener noreferrer">Technische Universität Darmstadt</a> · <span class="timeline__role">B.Sc. Wirtschaftsinformatik</span></p>
+                            <p class="timeline__grade">Abschlussnote 1,64</p>
+                            <p class="timeline__text">Studium der Wirtschaftsinformatik mit Informatik, Betriebswirtschaftslehre, Volkswirtschaftslehre und Recht.</p>
+                            <p class="timeline__text"><span class="timeline__label">Bachelorarbeit:</span> <q lang="en">A Qualitative Approach to Explore the Interplay between Privacy Concerns and Perceived Stress</q></p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Aug. 2022 – Mai 2023</p>
+                            <p class="timeline__org"><a href="https://www.siit.tu.ac.th/" target="_blank" rel="noopener noreferrer">Sirindhorn International Institute of Technology, Thammasat University</a> · <span class="timeline__role">Austauschstudent</span></p>
+                            <p class="timeline__grade">Abschlussnote 1,03</p>
+                            <p class="timeline__text">Zwei Semester in Thailand mit Schwerpunkten in digitaler Forensik, maschinellem Lernen und Natural Language Processing in einem internationalen Umfeld.</p>
+                        </li>
+                        <li class="timeline__item">
+                            <p class="timeline__when">Aug. 2011 – Juli 2019</p>
+                            <p class="timeline__org"><a href="https://www.main-taunus-schule.de/" target="_blank" rel="noopener noreferrer">Main-Taunus-Schule</a> · <span class="timeline__role">Abitur</span></p>
+                            <p class="timeline__text">Mein erster Informatikkurs hat mein Interesse an Informatik geweckt.</p>
+                        </li>
+                        </ol>
+                    </section>
+                </div>
+
+                <article class="oss oss--spaced reveal" aria-labelledby="recognition-title">
+                    <div>
+                        <p class="eyebrow">Auszeichnungen</p>
+                        <h3 class="oss__title" id="recognition-title">Stipendien &amp; Auszeichnungen</h3>
+                    </div>
+                    <ul class="oss__list">
+                        <li>
+                            <span><strong>Deutschlandstipendium</strong><span class="oss__sub">TU Darmstadt &amp; Carlo und Karin Giersch-Stiftung</span></span>
+                            <span class="oss__when">2022 &amp; 2024</span>
+                        </li>
+                        <li>
+                            <span><strong>Makers of Tomorrow</strong><span class="oss__sub">Onlinekurs zu Unternehmertum, eine Initiative des Bundeskanzleramts</span></span>
+                            <span class="oss__when">2022</span>
+                        </li>
+                    </ul>
+                </article>
+
+                <p class="section__footer reveal"><a class="link-more" href="../files/lebenslauf.pdf" type="application/pdf" download="Levin-Kaus-Lebenslauf.pdf">Vollständiger Lebenslauf (PDF)</a></p>
+            </div>
+        </section>
+
+        <!-- Swift -->
+        <section class="section section--alt" id="swift" aria-labelledby="swift-title">
+            <div class="container">
+                <header class="section__header reveal">
+                    <p class="eyebrow">Swift-Entwicklung</p>
+                    <h2 class="section__title" id="swift-title">iOS-Apps, nach Feierabend.</h2>
+                    <p class="section__lead">
+                        Swift habe ich während meines Praktikums bei INVENSITY gelernt und bin seitdem dabeigeblieben.
+                        Das sind meine Apps.
+                    </p>
+                </header>
+
+                <ul class="grid grid--2">
+                    <li class="card reveal">
+                        <picture>
+                            <source srcset="../images/reader-icon.avif" type="image/avif">
+                            <img class="app-icon" src="../images/reader-icon.png" width="72" height="72" alt="" loading="lazy" decoding="async">
+                        </picture>
+                        <h3 class="card__title">Reader</h3>
+                        <p class="card__text">Ein minimalistischer RSS-Reader für iOS.</p>
+                        <p class="card__meta">Eigenes Projekt · Mai 2025</p>
+                        <p class="card__links">
+                            <a class="link-more" href="https://reader.levinkaus.de" target="_blank" rel="noopener noreferrer">reader.levinkaus.de</a>
+                            <a class="link-more" href="https://apps.apple.com/app/id6504041406" target="_blank" rel="noopener noreferrer">App Store</a>
+                        </p>
+                    </li>
+                    <li class="card reveal">
+                        <span class="app-icon app-icon--glyph" aria-hidden="true">
+                            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="13" r="5"/><path d="M8 29c0-5.5 4.5-9 10-9s10 3.5 10 9"/></svg>
+                        </span>
+                        <h3 class="card__title">Business-Kontakt-App</h3>
+                        <p class="card__text">Eine DSGVO-konforme iOS-Kontakt-App für Unternehmen mit Anruferkennung; Kontakte werden über die Microsoft Graph API importiert.</p>
+                        <p class="card__meta">Praktikum bei INVENSITY · 2023–2024</p>
+                    </li>
+                </ul>
+
+                <p class="section__footer reveal"><a class="link-more" href="https://github.com/levinKaus" target="_blank" rel="noopener noreferrer">Mehr auf GitHub</a></p>
+            </div>
+        </section>
+
+        <!-- Unternehmertum -->
+        <section class="section" id="venture" aria-labelledby="venture-title">
+            <div class="container">
+                <article class="venture reveal">
+                    <picture>
+                        <source srcset="../images/heyoishii-profile-256.avif" type="image/avif">
+                        <img class="venture__logo" src="../images/heyoishii-profile-256.png" width="128" height="128" alt="HeyOishii-Logo" loading="lazy" decoding="async">
+                    </picture>
+                    <div>
+                        <p class="eyebrow">Unternehmertum</p>
+                        <h2 class="venture__title" id="venture-title">HeyOishii</h2>
+                        <p class="venture__role">Mitgründer &amp; CEO · seit Juli 2025</p>
+                        <p class="venture__text">
+                            Ein Onlineshop für asiatische Lebensmittel, den ich gemeinsam mit meiner Freundin gegründet habe.
+                            Ich kümmere mich um Produktbeschaffung, Onlineshop, Fulfillment und Buchhaltung.
+                        </p>
+                        <p><a class="link-more" href="https://heyoishii.shop" target="_blank" rel="noopener noreferrer">heyoishii.shop besuchen</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Kontakt -->
+        <section class="section section--alt contact" id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <header class="section__header reveal">
+                    <p class="eyebrow">Kontakt</p>
+                    <h2 class="section__title" id="contact-title">Gemeinsam die passende Lösung finden.</h2>
+                    <p class="section__lead">
+                        Fragen zu Identity and Access Management, ein konkretes Projekt oder ein Training für Ihr Team?
+                    </p>
+                </header>
+                <p class="reveal">
+                    <span class="contact__email" data-email-user="support" data-email-domain="levinkaus.de">support [at] levinkaus.de</span>
+                </p>
+                <p class="contact__links reveal">
+                    <a class="link-more" href="https://www.linkedin.com/in/levinkaus/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a class="link-more" href="../files/lebenslauf.pdf" type="application/pdf" download="Levin-Kaus-Lebenslauf.pdf">Lebenslauf herunterladen</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-footer__inner">
+            <p>© 2021–2026 Levin Kaus. Alle Rechte vorbehalten.</p>
+            <ul aria-label="Profile">
+                <li><a href="https://www.linkedin.com/in/levinkaus/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/levinKaus" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
